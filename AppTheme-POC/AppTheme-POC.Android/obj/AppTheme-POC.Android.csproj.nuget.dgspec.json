@@ -1,0 +1,48 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC.Android/AppTheme-POC.Android.csproj": {}
+  },
+  "projects": {
+    "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC.Android/AppTheme-POC.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC.Android/AppTheme-POC.Android.csproj",
+        "projectName": "AppTheme_POC.Android",
+        "projectPath": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC.Android/AppTheme-POC.Android.csproj",
+        "packagesPath": "/Users/felipe/.nuget/packages/",
+        "outputPath": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC.Android/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/felipe/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid90"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid90": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "dependencies": {
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.495, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

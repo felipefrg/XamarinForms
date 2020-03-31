@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:themes="clr-namespace:AppThemePOC.Views.Themes"
+             mc:Ignorable="d" x:Class="AppTheme_POC.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary Source="Views/Themes/ToscoTheme.xaml"/>
+            
+            <!--Global Styles-->
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor"
+                        Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+            <Style TargetType="TabbedPage"
+                   x:Key="TabbarColor">
+                <Setter Property="BackgroundColor" Value="{DynamicResource NavigationPrimary}"/>
+            </Style>
+
+            <Style x:Key="ListItemTextStyleExtended"           
+                   TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{DynamicResource TextColor}"/>
+            </Style>
+
+            <Style x:Key="ListItemDetailTextStyleExtended"           
+                   TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{DynamicResource TextColor}"/>            
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

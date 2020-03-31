@@ -1,0 +1,57 @@
+﻿<Properties StartupConfiguration="{9008CF06-2E81-4C3C-87A0-4343B3F5B582}|Default">
+  <MonoDevelop.Ide.ItemProperties.AppTheme-POC.Android FirstBuild="True" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppTheme-POC/Views/Themes/DefaultStyle.xaml">
+    <Files>
+      <File FileName="AppTheme-POC/App.xaml" Line="32" Column="58" />
+      <File FileName="AppTheme-POC/App.xaml.cs" Line="50" Column="51" />
+      <File FileName="AppTheme-POC/Views/Themes/LightTheme.xaml.cs" Line="1" Column="1" />
+      <File FileName="AppTheme-POC.iOS/AppDelegate.cs" Line="33" Column="45" />
+      <File FileName="AppTheme-POC/Views/Themes/DarkTheme.xaml" Line="13" Column="1" />
+      <File FileName="AppTheme-POC/Views/Themes/LightTheme.xaml" Line="10" Column="43" />
+      <File FileName="AppTheme-POC/Views/Themes/CommomTheme.xaml.cs" Line="7" Column="58" />
+      <File FileName="AppTheme-POC/Views/MainPage.xaml" Line="11" Column="13" />
+      <File FileName="AppTheme-POC/Views/ItemsPage.xaml" Line="39" Column="87" />
+      <File FileName="AppTheme-POC/Views/Themes/CommomTheme.xaml" Line="29" Column="56" />
+      <File FileName="AppTheme-POC/Views/Themes/ToscoTheme.xaml" Line="10" Column="35" />
+      <File FileName="AppTheme-POC/Views/Themes/ToscoTheme.xaml.cs" Line="7" Column="57" />
+      <File FileName="AppTheme-POC/Services/MockDataStore.cs" Line="1" Column="1" />
+      <File FileName="../../../../../.nuget/packages/xamarin.essentials/1.5.2/readme.txt" Line="1" Column="1" />
+      <File FileName="AppTheme-POC.Android/MainActivity.cs" Line="36" Column="30" />
+      <File FileName="AppTheme-POC.Android/Resources/values/styles.xml" Line="24" Column="13" />
+      <File FileName="AppTheme-POC.iOS/CustomRenderer/PageRenderer.cs" Line="7" Column="83" />
+      <File FileName="AppTheme-POC/Views/Themes/DefaultStyle.xaml" Line="4" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AppTheme-POC" expanded="True">
+            <Node name="AppTheme-POC" expanded="True">
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Themes" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="AppTheme-POC.Android" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
+            <Node name="AppTheme-POC.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
+              <Node name="CustomRenderer" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AppTheme-POC.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7ABEC678-9A52-44DD-BC00-860D4A67CCB9" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
