@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PP5XvdNH7tU7w1B71tSuoVRwv5eKVCko8ylZDElM40C2hPyM71mM0p1rA+hSwrhhdHplOoYdDgXQ5LxsadvT5g==",
+  "success": true,
+  "projectFilePath": "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC.iOS\\AppTheme-POC.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Felipe\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}

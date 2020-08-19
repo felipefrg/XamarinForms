@@ -783,6 +783,20 @@
           "build/Xamarin.Forms.props": {},
           "build/Xamarin.Forms.targets": {}
         }
+      },
+      "AppTheme-POC/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.2",
+          "Xamarin.Forms": "4.5.0.495"
+        },
+        "compile": {
+          "bin/placeholder/AppTheme-POC.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppTheme-POC.dll": {}
+        }
       }
     }
   },
@@ -1873,39 +1887,56 @@
         "xamarin.forms.4.5.0.495.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "AppTheme-POC/1.0.0": {
+      "type": "project",
+      "path": "../AppTheme-POC/AppTheme-POC.csproj",
+      "msbuildProject": "../AppTheme-POC/AppTheme-POC.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
+      "AppTheme-POC >= 1.0.0",
       "Xamarin.Essentials >= 1.5.2",
       "Xamarin.Forms >= 4.5.0.495"
     ]
   },
   "packageFolders": {
-    "/Users/felipe/.nuget/packages/": {}
+    "C:\\Users\\Felipe\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC.Android/AppTheme-POC.Android.csproj",
-      "projectName": "AppTheme_POC.Android",
-      "projectPath": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC.Android/AppTheme-POC.Android.csproj",
-      "packagesPath": "/Users/felipe/.nuget/packages/",
-      "outputPath": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC.Android/obj/",
+      "projectUniqueName": "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC.Android\\AppTheme-POC.Android.csproj",
+      "projectName": "AppTheme-POC.Android",
+      "projectPath": "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC.Android\\AppTheme-POC.Android.csproj",
+      "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
+      "outputPath": "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/felipe/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC\\AppTheme-POC.csproj": {
+              "projectPath": "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC\\AppTheme-POC.csproj"
+            }
+          }
         }
       }
     },

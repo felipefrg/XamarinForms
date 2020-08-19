@@ -600,24 +600,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/felipe/.nuget/packages/": {}
+    "C:\\Users\\Felipe\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC/AppTheme-POC.csproj",
+      "projectUniqueName": "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC\\AppTheme-POC.csproj",
       "projectName": "AppTheme-POC",
-      "projectPath": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC/AppTheme-POC.csproj",
-      "packagesPath": "/Users/felipe/.nuget/packages/",
-      "outputPath": "/Users/felipe/Documents/Projects/Personal/XamarinForms/AppTheme-POC/AppTheme-POC/obj/",
+      "projectPath": "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC\\AppTheme-POC.csproj",
+      "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
+      "outputPath": "C:\\Workspaces\\Projetos Exemplos\\XamarinForms\\AppTheme-POC\\AppTheme-POC\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/felipe/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -659,7 +668,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

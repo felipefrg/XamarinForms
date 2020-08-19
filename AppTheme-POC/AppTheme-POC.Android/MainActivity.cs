@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content.Res;
 
 namespace AppTheme_POC.Droid
 {
@@ -30,10 +31,11 @@ namespace AppTheme_POC.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
-        public override void OnConfigurationChanged(Configuration newconfig)
+        public override void OnConfigurationChanged(Configuration newConfig)
         {
-            base.OnConfigurationChanged(newconfig);
+            base.OnConfigurationChanged(newConfig);
             App.ApplyTheme();
         }
+        
     }
 }
