@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<custom:CustomPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:CustomStatusBar_POC.Custom"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"                                           
+             custom:PageAttachedProperties.StatusBarEffect="TRANSLUCID"      
+             x:Class="CustomStatusBar_POC.MainPage">
+
+    <StackLayout BackgroundColor="DarkGreen">
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="Start" />
+        <Button Text="Next Page" Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</custom:CustomPage>
