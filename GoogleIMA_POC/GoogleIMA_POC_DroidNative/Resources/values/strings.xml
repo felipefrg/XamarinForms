@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GoogleIMA_POC_DroidNative</string>
+    <string name="action_settings">Settings</string>
+</resources>
