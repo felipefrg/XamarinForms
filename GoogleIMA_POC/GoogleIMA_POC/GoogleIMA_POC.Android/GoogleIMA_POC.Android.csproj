@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -90,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GoogleIMA_POC\GoogleIMA_POC.csproj">
-      <Project>{5DF5CAFA-704C-4E26-B15F-43F26CD8CBBB}</Project>
+      <Project>{9A76A55A-2C00-436F-A365-949A0C39BAB4}</Project>
       <Name>GoogleIMA_POC</Name>
     </ProjectReference>
   </ItemGroup>

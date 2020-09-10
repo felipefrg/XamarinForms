@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -102,7 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppFingerPrint-POC\AppFingerPrint-POC.csproj">
-      <Project>{D902D469-42CD-42BE-BFF9-CA8D6A8718F5}</Project>
+      <Project>{27CCD07D-3689-4666-B8DD-886011157ABC}</Project>
       <Name>AppFingerPrint-POC</Name>
     </ProjectReference>
   </ItemGroup>
