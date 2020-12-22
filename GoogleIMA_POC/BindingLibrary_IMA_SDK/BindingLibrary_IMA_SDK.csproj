@@ -14,8 +14,12 @@
     <AssemblyName>BindingLibrary_IMA_SDK</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <Deterministic>True</Deterministic>
+<<<<<<< HEAD
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+=======
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+>>>>>>> 88e1568a1b1c51305f292ac5ecf4f288f008da71
     <AndroidClassParser>class-parse</AndroidClassParser>
     <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
