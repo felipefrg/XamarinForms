@@ -8,7 +8,7 @@ using Plugin.CurrentActivity;
 namespace AppFingerPrint_POC.Droid
 {
     [Activity(Label = "AppFingerPrint_POC", 
-        Icon = "@mipmap/icon", 
+        Icon = "@mipmap/fingericon", 
         Theme = "@style/MainTheme", 
         MainLauncher = true, 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

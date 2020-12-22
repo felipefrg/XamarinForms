@@ -1,57 +1,132 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.Design.Widget;
-
-using Android.Views;
-using Android.Widget;
 using AndroidX.AppCompat.App;
-using Google.Android.Material.FloatingActionButton;
-using Google.Android.Material.Snackbar;
+using Com.Google.Android.Exoplayer2;
+using Com.Google.Android.Exoplayer2.Ext.Ima;
+using Com.Google.Android.Exoplayer2.Source;
+using Com.Google.Android.Exoplayer2.Source.Ads;
+using Com.Google.Android.Exoplayer2.UI;
+using Com.Google.Android.Exoplayer2.Upstream;
+using Com.Google.Android.Exoplayer2.Util;
 
 namespace GoogleIMA_POC_DroidNative
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        PlayerView playerView;
+        SimpleExoPlayer player;
+         ImaAdsLoader adsLoader;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            //Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);            
-            AndroidX.AppCompat.Widget.Toolbar toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
+            playerView = FindViewById(Resource.Id.player_view) as PlayerView;
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
+            adsLoader = new ImaAdsLoader(this, Android.Net.Uri.Parse(GetString(Resource.String.ad_tag_url)));
+
+            //Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);                        
         }
 
-        public override bool OnCreateOptionsMenu(IMenu menu)
+        private void releasePlayer()
         {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
+            adsLoader.SetPlayer(null);
+            playerView.Player = null;
+            player.Release();
+            player = null;
         }
 
-        public override bool OnOptionsItemSelected(IMenuItem item)
+        private void initializePlayer()
         {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
+            player = new SimpleExoPlayer
+                .Builder(this)
+                .Build();
+            playerView.Player = player;
+            adsLoader.SetPlayer(player);
+
+            DefaultDataSourceFactory  defaultDataSourceFactory = 
+                new DefaultDataSourceFactory(this,
+                                             Util.GetUserAgent(this, GetString(Resource.String.app_name)));
+
+            ProgressiveMediaSource.Factory mediaSourceFactory =
+                new ProgressiveMediaSource.Factory(defaultDataSourceFactory);
+
+            IMediaSource mediaSource = mediaSourceFactory
+                .CreateMediaSource(Android.Net.Uri.Parse(GetString(Resource.String.content_url)));
+
+            AdsMediaSource adsMediaSource =
+                new AdsMediaSource(mediaSource, defaultDataSourceFactory, adsLoader, playerView);
+
+            player.Prepare(adsMediaSource);
+
+            player.PlayWhenReady = false;
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+
+            if (Util.SdkInt > 23)
             {
-                return true;
+                initializePlayer();
+                if(playerView != null)
+                {
+                    playerView.OnResume();
+                }
+            }
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            if (Util.SdkInt <= 23 || player == null)
+            {
+                initializePlayer();
+                if (playerView != null)
+                {
+                    playerView.OnResume();
+                }
+            }
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+
+            if (Util.SdkInt > 23)
+            {                
+                if (playerView != null)
+                {
+                    playerView.OnPause();
+                }
+                releasePlayer();
+            }
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+            if (Util.SdkInt > 23)
+            {
+                if (playerView != null)
+                {
+                    playerView.OnPause();
+                }
+                releasePlayer();
             }
 
-            return base.OnOptionsItemSelected(item);
         }
 
-        private void FabOnClick(object sender, EventArgs eventArgs)
+        protected override void OnDestroy()
         {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
+            base.OnDestroy();
+            adsLoader.Release();
         }
+
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
